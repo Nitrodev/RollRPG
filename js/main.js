@@ -126,7 +126,7 @@ function roll(target) {
       lootRoll = random(lowestCost, highestCost);
 
       // Show the loot roll
-      ELTS['loot-roll'].innerHTML = `Loot roll: ${lootRoll}`;
+      ELTS['loot-roll'].innerHTML = `${lootRoll}`;
 
       // Hide the button and show the loot confirmation button
       ELTS['loot'].classList.add('hidden');
@@ -249,11 +249,13 @@ function handleLoot() {
   selectedLoot = [];
   currentMob = null;
 
-  // Clear the loot info
+  // Update relevant UI
   ELTS['loot-info'].innerHTML = '';
+  ELTS['loot-roll'].innerHTML = '0';
 
-  // Hide the loot div
   hide(ELTS['loot-div']);
+  hide(ELTS['loot-confirm']);
+  show(ELTS['loot']);
 
   updateCombat();
   updatePlayer();
