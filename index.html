@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Roll RPG</title>
+</head>
+<body onload="setup()">
+
+  <div class="container">
+    <div class="header">
+      <h1>Roll RPG</h1>
+    </div>
+    <div id="tab-btns">
+      <p class="tab-btn">Fight!</p>
+      <p class="tab-btn">Player</p>
+      <p class="tab-btn">Map</p>
+    </div>
+    <div id="tabs">
+      <div class="tab">
+        <p class="tab-header">Fight</p>
+        <div class="tab-content">
+          <div id="combat-div">
+            <p>
+              <strong>You</strong>
+              <br>
+              <strong id="health"></strong>
+              <br>
+              <strong id="damage"></strong>
+              <br>
+              <strong id="defense"></strong>
+            </p>
+            <button id="combat" onclick="handleCombat()">Next Turn</button>
+            <p>
+              <strong id="mob-info"></strong>
+              <br>
+              <strong id="mob-health"></strong>
+              <br>
+              <strong id="mob-damage"></strong>
+              <br>
+              <strong id="mob-defense"></strong>
+            </p>
+          </div>
+          <div id="loot-div" class="hidden">
+            <button id="loot" onclick="roll('loot')">Roll</button>
+            <button id="loot-confirm" class="hidden" onclick="handleLoot()">Confirm</button>
+            <span id="loot-roll">Loot roll: </span> - 
+            <span id="loot-cost">0</span>
+            <div id="loot-info"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab hidden">
+        <p class="tab-header">Player</p>
+        <div class="tab-content"></div>
+      </div>
+      <div class="tab hidden">
+        <p class="tab-header">Map</p>
+        <div class="tab-content"></div>
+      </div>
+    </div>
+    <div id="log">
+
+    </div>
+  </div>
+  
+  <script src="js/utils.js"></script>
+  <script src="js/items.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/mob.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "unarmed",
+    "description": "Use your body to fight.",
+    "type": "combat",
+    "conditions": [
+      {
+        "type": "weapon",
+        "value": null
+      },
+      {
+        "type": "damage",
+        "value": 10
+      }
+    ],
+    "effects": []
+  },
+  {
+    "id": "swordsmanship",
+    "description": "Use your sword to fight.",
+    "type": "combat",
+    "conditions": [
+      {
+        "type": "weapon",
+        "value": "sword"
+      },
+      {
+        "type": "damage",
+        "value": 10
+      }
+    ],
+    "effects": []
+  },
+  {
+    "id": "sword_mastery",
+    "description": "You have mastered the sword.",
+    "type": "combat",
+    "conditions": [
+      {
+        "type": "skill",
+        "value": "swordsmanship"
+      },
+      {
+        "type": "weapon",
+        "value": "sword"
+      },
+      {
+        "type": "damage",
+        "value": 100
+      }
+    ],
+    "effects": []
+  },
+  {
+    "id": "archery",
+    "description": "Use your bow to fight.",
+    "type": "combat",
+    "conditions": [
+      {
+        "type": "weapon",
+        "value": "bow"
+      },
+      {
+        "type": "damage",
+        "value": 10
+      }
+    ],
+    "effects": []
+  },
+  {
+    "id": "bow_mastery",
+    "description": "You have mastered the bow.",
+    "type": "combat",
+    "conditions": [
+      {
+        "type": "skill",
+        "value": "archery"
+      },
+      {
+        "type": "weapon",
+        "value": "bow"
+      },
+      {
+        "type": "damage",
+        "value": 100
+      }
+    ],
+    "effects": []
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "rat_tail",
+    "type": "string",
+    "description": "The tail of a rat."
+  },
+  {
+    "id": "rat_hide",
+    "type": "leather",
+    "description": "The hide of a rat."
+  },
+  {
+    "id": "ranged_chestplate0",
+    "type": "armor",
+    "description": "ranged_chestplate0_desc",
+    "recipe": {
+      "ingredients": [
+        {
+          "id": "rat_hide",
+          "quantity": 4
+        }
+      ],
+      "tools": [],
+      "result": {
+        "id": "ranged_chestplate0",
+        "quantity": 1
+      }
+    }
+  }
+]
