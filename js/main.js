@@ -123,7 +123,7 @@ function roll(target) {
       }
 
       // Roll a number between the lowest cost and highest cost
-      lootRoll = random(lowestCost, highestCost);
+      lootRoll = random(lowestCost, highestCost+1);
 
       // Show the loot roll
       ELTS['loot-roll'].innerHTML = `${lootRoll}`;
@@ -402,6 +402,7 @@ function updateMap() {
  */
 function showLoot(loot) {
   // Go through all the loot and show them in the loot window
+
   for(let item of loot) {
     let br = document.createElement('br');
     let lootElt = document.createElement('p');
@@ -437,6 +438,8 @@ function showLoot(loot) {
           ELTS['loot-confirm'].disabled = false;
           ELTS['loot-cost'].style.color = 'black';
         }
+      } else {
+        log('You need to roll for loot currency first!', 'red');
       }
     });
 
